@@ -2,6 +2,7 @@ package MMM::Tools::Tools;
 
 use strict;
 use warnings FATAL => 'all';
+no warnings 'uninitialized';
 use English qw(FORMAT_NAME);
 use Path::Class qw(dir);
 use Log::Log4perl qw(:easy);

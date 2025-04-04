@@ -2,6 +2,7 @@ package MMM::Common::PidFile;
 
 use strict;
 use warnings FATAL => 'all';
+no warnings 'uninitialized';
 use English qw( PROCESS_ID );
 use Log::Log4perl qw(:easy);
 

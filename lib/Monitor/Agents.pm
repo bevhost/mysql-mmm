@@ -3,6 +3,7 @@ use base 'Class::Singleton';
 
 use strict;
 use warnings FATAL => 'all';
+no warnings 'uninitialized';
 use Log::Log4perl qw(:easy);
 use IO::Handle;
 use File::Temp;

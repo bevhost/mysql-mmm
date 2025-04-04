@@ -2,6 +2,7 @@ package MMM::Monitor::Commands;
 
 use strict;
 use warnings FATAL => 'all';
+no warnings 'uninitialized';
 use Log::Log4perl qw(:easy);
 use List::Util qw(max);
 use threads;

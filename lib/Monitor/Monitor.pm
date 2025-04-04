@@ -2,6 +2,7 @@ package MMM::Monitor::Monitor;
 
 use strict;
 use warnings FATAL => 'all';
+no warnings 'uninitialized';
 use threads;
 use threads::shared;
 use Algorithm::Diff;

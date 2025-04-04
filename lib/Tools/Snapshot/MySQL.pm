@@ -2,6 +2,7 @@ package MMM::Tools::Snapshot::MySQL;
 
 use strict;
 use warnings FATAL => 'all';
+no warnings 'uninitialized';
 use Data::Dumper;
 use DBI;
 use Log::Log4perl qw(:easy);

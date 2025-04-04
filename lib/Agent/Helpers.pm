@@ -2,6 +2,7 @@ package MMM::Agent::Helpers;
 
 use strict;
 use warnings FATAL => 'all';
+no warnings 'uninitialized';
 use Log::Log4perl qw(:easy);
 
 our $VERSION = 	'0.01';

@@ -2,6 +2,7 @@ package MMM::Agent::Helpers::Network;
 
 use strict;
 use warnings FATAL => 'all';
+no warnings 'uninitialized';
 use English qw( OSNAME );
 
 our $VERSION = '0.01';

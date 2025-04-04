@@ -2,6 +2,7 @@ package MMM::Common::Role;
 
 use strict;
 use warnings FATAL => 'all';
+no warnings 'uninitialized';
 
 our $VERSION = '0.01';
 

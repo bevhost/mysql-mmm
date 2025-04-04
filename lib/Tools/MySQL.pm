@@ -2,6 +2,7 @@ package MMM::Tools::MySQL;
 
 use strict;
 use warnings FATAL => 'all';
+no warnings 'uninitialized';
 use DBI;
 use Log::Log4perl qw(:easy);
 

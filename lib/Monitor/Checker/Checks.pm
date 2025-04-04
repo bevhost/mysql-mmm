@@ -2,6 +2,7 @@ package MMM::Monitor::Checker::Checks;
 
 use strict;
 use warnings FATAL => 'all';
+no warnings 'uninitialized';
 use English qw(OSNAME EFFECTIVE_USER_ID);
 use DBI;
 use Net::Ping;

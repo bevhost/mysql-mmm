@@ -2,6 +2,7 @@ package MMM::Common::Angel;
 
 use strict;
 use warnings FATAL => 'all';
+no warnings 'uninitialized';
 use English qw( CHILD_ERROR ERRNO );
 use Log::Log4perl qw(:easy);
 use Errno qw( EINTR );

@@ -2,6 +2,7 @@ package MMM::Monitor::Agent;
 
 use strict;
 use warnings FATAL => 'all';
+no warnings 'uninitialized';
 use Log::Log4perl qw(:easy);
 use MMM::Common::Socket;
 use MMM::Monitor::ChecksStatus;

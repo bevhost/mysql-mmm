@@ -3,6 +3,7 @@ use base 'Class::Singleton';
 
 use strict;
 use warnings FATAL => 'all';
+no warnings 'uninitialized';
 use Log::Log4perl qw(:easy);
 use MMM::Monitor::Agents;
 use MMM::Monitor::Role;

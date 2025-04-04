@@ -2,6 +2,7 @@ package MMM::Agent::Agent;
 
 use strict;
 use warnings FATAL => 'all';
+no warnings 'uninitialized';
 use English qw(EVAL_ERROR);
 use Algorithm::Diff;
 use DBI;

@@ -2,6 +2,7 @@
 
 use strict;
 use warnings FATAL => 'all';
+no warnings 'uninitialized';
 use English qw( PROGRAM_NAME );
 use File::Basename;
 use Log::Log4perl qw(:easy);

@@ -2,6 +2,7 @@ package MMM::Monitor::Checker;
 
 use strict;
 use warnings FATAL => 'all';
+no warnings 'uninitialized';
 use Log::Log4perl qw(:easy);
 use IPC::Open2;
 use MMM::Monitor::CheckResult;
