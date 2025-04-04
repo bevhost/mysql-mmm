@@ -37,6 +37,7 @@ struct 'MMM::Agent::Agent' => {
 	mysql_password		=> '$',
 	writer_role			=> '$',
 	bin_path			=> '$',
+	notify_cmd			=> '$',
 
 	active_master		=> '$',
 	state				=> '$',
@@ -49,6 +50,8 @@ sub main($) {
 	my $socket	= MMM::Common::Socket::create_listener($self->ip, $self->port);
 	$self->roles([]);
 	$self->active_master('');
+
+	if ($self->notify_cmd) { system($self->notify_cmd); }
 
 	while (!$main::shutdown) {
 
@@ -236,6 +239,8 @@ sub cmd_set_status($$) {
 		foreach my $role (@added_roles)		{ $role->add(); }
 
 		$self->roles(\@new_roles);
+
+		if ($self->notify_cmd) { system($self->notify_cmd); }
 	}
 	
 	# Process state change
@@ -272,6 +277,7 @@ sub from_config($%) {
 	$self->mysql_password	($host->{agent_password});
 	$self->writer_role		($config->{active_master_role});
 	$self->bin_path			($host->{bin_path});
+	$self->notify_cmd		($host->{notify_cmd});
 }
 
 1;

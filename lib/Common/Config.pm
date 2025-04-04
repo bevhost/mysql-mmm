@@ -99,6 +99,7 @@ our $RULESET = {
 		'lvm_volume_group'		=> { 'required' => ['TOOLS'] },
 		'lvm_mount_dir'			=> { 'required' => ['TOOLS'] },
 		'lvm_mount_opts'		=> { 'required' => ['TOOLS'] },
+		'notify_cmd'			=> { 'default' => '' },
 		}
 	},
 	'check'					=> { 'create_if_empty' => ['MONITOR'], 'multiple' => 1, 'template' => 'default', 'values' => ['ping', 'mysql', 'rep_backlog', 'rep_threads'], 'section' => {
